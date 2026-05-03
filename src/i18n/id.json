@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "catalog": "Katalog",
+    "howToOrder": "Cara Order",
+    "gallery": "Galeri",
+    "about": "Tentang Kami"
+  },
+  "hero": {
+    "tagline": "Keychain Custom Handmade",
+    "subtitle": "Abadikan momen spesialmu dalam gantungan kunci yang dibuat dengan cinta 🌸",
+    "ctaCatalog": "Lihat Produk",
+    "ctaOrder": "Order via WA"
+  },
+  "brandStory": {
+    "title": "Kenalan dengan Kami ✨",
+    "description": "Piko & Lea adalah duo kreatif di balik setiap keychain unik yang kamu lihat. Piko sebagai Illustrator menuangkan ide menjadi sketsa cantik, sementara Lea sebagai Finisher menyempurnakan setiap detail hingga menjadi karya yang siap menemanimu ke mana saja.",
+    "cta": "Selengkapnya Tentang Kami"
+  },
+  "featuredProducts": {
+    "title": "Produk Unggulan 🌟",
+    "subtitle": "Pilihan terlaris yang paling disukai pelanggan kami",
+    "viewAll": "Lihat Semua Produk",
+    "startingFrom": "Mulai dari",
+    "bestSeller": "Terlaris",
+    "detail": "Lihat Detail",
+    "duration": "Estimasi"
+  },
+  "orderProcess": {
+    "title": "Cara Order 📝",
+    "subtitle": "Gampang banget! Cuma 4 langkah simpel",
+    "steps": [
+      {
+        "title": "Chat via WhatsApp",
+        "description": "Klik tombol WA, kirim pesan pertamamu"
+      },
+      {
+        "title": "Kirim Referensi",
+        "description": "Kirim foto & pilih gaya yang kamu mau"
+      },
+      {
+        "title": "Konfirmasi & Bayar",
+        "description": "Setujui harga, bayar DP 50%"
+      },
+      {
+        "title": "Terima Pesanan",
+        "description": "Tunggu 7-11 hari, keychain cantikmu siap!"
+      }
+    ],
+    "cta": "Lihat Detail Cara Order"
+  },
+  "testimonials": {
+    "title": "Apa Kata Mereka 💕",
+    "subtitle": "Review jujur dari pelanggan yang sudah order"
+  },
+  "catalog": {
+    "title": "Katalog Produk 🎨",
+    "subtitle": "Pilih gaya keychain yang paling kamu suka",
+    "filterAll": "Semua",
+    "filterSketsa": "Sketsa B&W",
+    "filterColor": "Full Color",
+    "filterCouple": "Couple",
+    "filterAnime": "Anime",
+    "filterCharm": "+ Charm",
+    "casingTitle": "Pilihan Bentuk Casing",
+    "casingSubtitle": "Setiap keychain bisa dibuat dalam bentuk casing favoritmu",
+    "love": "Love",
+    "square": "Kotak",
+    "oval": "Oval",
+    "circle": "Bulat",
+    "noProducts": "Belum ada produk di kategori ini"
+  },
+  "productDetail": {
+    "description": "Deskripsi",
+    "price": "Harga",
+    "duration": "Estimasi Pengerjaan",
+    "casingOptions": "Pilihan Bentuk Casing",
+    "orderNow": "Order Sekarang via WA",
+    "relatedWorks": "Karya Terkait",
+    "backToCatalog": "Kembali ke Katalog",
+    "material": "Material",
+    "size": "Ukuran"
+  },
+  "howToOrder": {
+    "title": "Cara Order 📋",
+    "subtitle": "Ikuti langkah-langkah mudah berikut ini untuk memesan keychain custom impianmu",
+    "steps": [
+      {
+        "title": "Hubungi via WA",
+        "description": "Klik tombol WhatsApp, kirim pesan pertamamu ke kami"
+      },
+      {
+        "title": "Isi Form Order",
+        "description": "Kirim foto referensi, pilih bentuk & gaya, tambahkan catatan khusus"
+      },
+      {
+        "title": "Konfirmasi Harga",
+        "description": "Piko & Lea balas estimasi harga + waktu pengerjaan"
+      },
+      {
+        "title": "Bayar DP 50%",
+        "description": "Transfer DP, kirim bukti pembayaran via WhatsApp"
+      },
+      {
+        "title": "Pengerjaan",
+        "description": "Proses menggambar & finishing (7–11 hari kerja)"
+      },
+      {
+        "title": "Preview & Approval",
+        "description": "Foto gambar dikirim untuk persetujuanmu sebelum dirakit"
+      },
+      {
+        "title": "Pelunasan & Kirim",
+        "description": "Bayar sisa → produk dikirim atau COD area kampus Binus"
+      },
+      {
+        "title": "Follow Up",
+        "description": "Kami minta review + foto kamu pakai produknya ya! 🥰"
+      }
+    ],
+    "ctaOrder": "Mulai Order Sekarang"
+  },
+  "footer": {
+    "tagline": "Keychain custom handmade penuh cinta dari Bandung 🌸",
+    "quickLinks": "Menu",
+    "contact": "Hubungi Kami",
+    "followUs": "Ikuti Kami",
+    "copyright": "© 2026 Piko & Lea. Dibuat dengan 💕"
+  },
+  "floatingWa": {
+    "tooltip": "Chat kami di WhatsApp!"
+  },
+  "galleryPage": {
+    "title": "Galeri Karya 🖼️",
+    "subtitle": "Koleksi keychain custom yang pernah kami buat untuk pelanggan setia",
+    "filterAll": "Semua",
+    "filterSketsa": "Sketsa",
+    "filterColor": "Warna",
+    "filterCouple": "Couple",
+    "filterAnime": "Anime"
+  },
+  "aboutPage": {
+    "title": "Tentang Kami 🌸",
+    "subtitle": "Kenalan lebih dekat dengan Piko & Lea",
+    "whoAreWe": "Siapa Kami?",
+    "whoAreWeDesc": "Kami adalah dua mahasiswi Binus University Bandung yang punya passion besar di bidang seni dan kerajinan tangan. Berawal dari hobi menggambar dan membuat aksesori, kami memutuskan untuk membangun 'Piko & Lea' sebagai wadah kreativitas kami.",
+    "pikoRole": "Ilustrator",
+    "pikoDesc": "Piko adalah tangan ajaib di balik setiap goresan wajah di keychain kamu. Spesialis sketsa dan pewarnaan.",
+    "leaRole": "Finisher & Crafter",
+    "leaDesc": "Lea memastikan setiap gambar aman di dalam casing, merakit charm, dan mem-packing pesananmu dengan cantik.",
+    "location": "Lokasi Kami",
+    "locationDesc": "Kami berbasis di sekitar Kampus Binus University Bandung. Untuk area kampus, kami melayani sistem COD (Cash on Delivery) lho!",
+    "instagram": "Ikuti keseharian dan karya terbaru kami di Instagram"
+  }
+}

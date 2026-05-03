@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "howToOrder": "How to Order",
+    "gallery": "Gallery",
+    "about": "About Us"
+  },
+  "hero": {
+    "tagline": "Custom Handmade Keychains",
+    "subtitle": "Capture your special moments in a keychain made with love 🌸",
+    "ctaCatalog": "View Products",
+    "ctaOrder": "Order via WA"
+  },
+  "brandStory": {
+    "title": "Meet the Team ✨",
+    "description": "Piko & Lea are the creative duo behind every unique keychain you see. Piko as the Illustrator turns ideas into beautiful sketches, while Lea as the Finisher perfects every detail into a piece of art ready to accompany you everywhere.",
+    "cta": "More About Us"
+  },
+  "featuredProducts": {
+    "title": "Featured Products 🌟",
+    "subtitle": "Best-selling picks loved by our customers",
+    "viewAll": "View All Products",
+    "startingFrom": "Starting from",
+    "bestSeller": "Best Seller",
+    "detail": "View Detail",
+    "duration": "Estimated"
+  },
+  "orderProcess": {
+    "title": "How to Order 📝",
+    "subtitle": "Super easy! Just 4 simple steps",
+    "steps": [
+      {
+        "title": "Chat via WhatsApp",
+        "description": "Click the WA button, send your first message"
+      },
+      {
+        "title": "Send Reference",
+        "description": "Send photos & choose the style you want"
+      },
+      {
+        "title": "Confirm & Pay",
+        "description": "Agree on price, pay 50% deposit"
+      },
+      {
+        "title": "Receive Your Order",
+        "description": "Wait 7-11 days, your cute keychain is ready!"
+      }
+    ],
+    "cta": "See Full Order Guide"
+  },
+  "testimonials": {
+    "title": "What They Say 💕",
+    "subtitle": "Honest reviews from customers who already ordered"
+  },
+  "catalog": {
+    "title": "Product Catalog 🎨",
+    "subtitle": "Choose the keychain style you love the most",
+    "filterAll": "All",
+    "filterSketsa": "Sketch B&W",
+    "filterColor": "Full Color",
+    "filterCouple": "Couple",
+    "filterAnime": "Anime",
+    "filterCharm": "+ Charm",
+    "casingTitle": "Casing Shape Options",
+    "casingSubtitle": "Every keychain can be made in your favorite casing shape",
+    "love": "Heart",
+    "square": "Square",
+    "oval": "Oval",
+    "circle": "Circle",
+    "noProducts": "No products in this category yet"
+  },
+  "productDetail": {
+    "description": "Description",
+    "price": "Price",
+    "duration": "Estimated Time",
+    "casingOptions": "Casing Shape Options",
+    "orderNow": "Order Now via WA",
+    "relatedWorks": "Related Works",
+    "backToCatalog": "Back to Catalog",
+    "material": "Material",
+    "size": "Size"
+  },
+  "howToOrder": {
+    "title": "How to Order 📋",
+    "subtitle": "Follow these easy steps to order your dream custom keychain",
+    "steps": [
+      {
+        "title": "Contact via WA",
+        "description": "Click the WhatsApp button, send us your first message"
+      },
+      {
+        "title": "Fill Order Form",
+        "description": "Send reference photos, choose shape & style, add special notes"
+      },
+      {
+        "title": "Price Confirmation",
+        "description": "Piko & Lea will reply with price estimate + production time"
+      },
+      {
+        "title": "Pay 50% Deposit",
+        "description": "Transfer the deposit, send payment proof via WhatsApp"
+      },
+      {
+        "title": "Production",
+        "description": "Drawing & finishing process (7–11 working days)"
+      },
+      {
+        "title": "Preview & Approval",
+        "description": "We'll send artwork photos for your approval before assembly"
+      },
+      {
+        "title": "Final Payment & Shipping",
+        "description": "Pay the remaining → product shipped or COD around Binus campus"
+      },
+      {
+        "title": "Follow Up",
+        "description": "We'd love your review + photo wearing the product! 🥰"
+      }
+    ],
+    "ctaOrder": "Start Ordering Now"
+  },
+  "footer": {
+    "tagline": "Custom handmade keychains made with love from Bandung 🌸",
+    "quickLinks": "Menu",
+    "contact": "Contact Us",
+    "followUs": "Follow Us",
+    "copyright": "© 2026 Piko & Lea. Made with 💕"
+  },
+  "floatingWa": {
+    "tooltip": "Chat us on WhatsApp!"
+  },
+  "galleryPage": {
+    "title": "Artwork Gallery 🖼️",
+    "subtitle": "Collection of custom keychains we've made for our loyal customers",
+    "filterAll": "All",
+    "filterSketsa": "Sketch",
+    "filterColor": "Color",
+    "filterCouple": "Couple",
+    "filterAnime": "Anime"
+  },
+  "aboutPage": {
+    "title": "About Us 🌸",
+    "subtitle": "Get to know Piko & Lea closer",
+    "whoAreWe": "Who Are We?",
+    "whoAreWeDesc": "We are two students from Binus University Bandung who have a huge passion for arts and crafts. Starting from our hobby of drawing and making accessories, we decided to build 'Piko & Lea' as a platform for our creativity.",
+    "pikoRole": "Illustrator",
+    "pikoDesc": "Piko is the magic hand behind every face stroke on your keychain. Specialist in sketching and coloring.",
+    "leaRole": "Finisher & Crafter",
+    "leaDesc": "Lea ensures every drawing is safe inside the casing, assembles the charms, and packs your order beautifully.",
+    "location": "Our Location",
+    "locationDesc": "We are based around Binus University Bandung Campus. For the campus area, we provide COD (Cash on Delivery) service!",
+    "instagram": "Follow our daily life and latest works on Instagram"
+  }
+}

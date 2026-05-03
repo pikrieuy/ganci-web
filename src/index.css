@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #4A148C;
+  }
+
+  ::selection {
+    background-color: #F8BBD9;
+    color: #4A148C;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-pink-main text-white font-nunito font-bold px-6 py-3 rounded-full 
+           shadow-md hover:shadow-lg hover:brightness-110 
+           transition-all duration-300 ease-in-out;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-pink-main font-nunito font-bold px-6 py-3 rounded-full 
+           border-2 border-pink-main shadow-md hover:bg-pink-light
+           transition-all duration-300 ease-in-out;
+  }
+
+  .card-product {
+    @apply bg-white rounded-2xl shadow-md border border-pink-light 
+           hover:shadow-xl hover:scale-[1.03] hover:border-pink-medium
+           transition-all duration-300 ease-in-out overflow-hidden;
+  }
+
+  .section-padding {
+    @apply px-4 py-16 md:px-8 lg:px-16 xl:px-24;
+  }
+
+  .heading-section {
+    @apply text-3xl md:text-4xl font-playfair font-bold text-purple-dark text-center mb-4;
+  }
+
+  .subheading-section {
+    @apply text-gray-text font-nunito text-center text-base md:text-lg mb-12 max-w-2xl mx-auto;
+  }
+
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md rounded-2xl border border-white/50 shadow-lg;
+  }
+}
+
+@layer utilities {
+  .text-gradient-pink {
+    @apply bg-gradient-to-r from-pink-main to-purple-accent bg-clip-text text-transparent;
+  }
+
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, #FCE4EC 0%, #F8BBD9 50%, #E1BEE7 100%);
+  }
+
+  .bg-dots-pattern {
+    background-image: radial-gradient(circle, #F48FB1 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+/* Scrollbar custom */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FCE4EC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F48FB1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CE93D8;
+}
