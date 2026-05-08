@@ -127,41 +127,48 @@ const Gallery = () => {
           ))}
         </motion.div>
 
-        {/* Masonry Grid */}
+        {/* Pinterest-style Masonry Grid */}
         <motion.div 
           layout
-          className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4"
+          className="masonry-grid"
         >
           <AnimatePresence>
-            {filteredItems.map((item, index) => (
-              <motion.div
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3 }}
-                key={item.id}
-                className="relative group break-inside-avoid cursor-pointer overflow-hidden rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300"
-                onClick={() => openLightbox(index)}
-              >
-                <img 
-                  src={item.image} 
-                  alt={i18n.language === 'id' ? item.caption : item.caption_en} 
-                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-                
-                {/* Overlay Hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-dark/80 via-purple-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                  <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <ZoomIn className="text-white mb-2" size={24} />
-                    <p className="text-white font-sans text-sm line-clamp-2">
-                      {i18n.language === 'id' ? item.caption : item.caption_en}
-                    </p>
+            {filteredItems.map((item, index) => {
+              // Calculate dynamic row span based on image aspect ratio
+              const aspectRatio = item.height / item.width;
+              const rowSpan = Math.max(8, Math.round(aspectRatio * 10)); // Minimum 8 rows
+              
+              return (
+                <motion.div
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                  key={item.id}
+                  className="masonry-item group cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300"
+                  style={{ gridRow: `span ${rowSpan}` }}
+                  onClick={() => openLightbox(index)}
+                >
+                  <img 
+                    src={item.image} 
+                    alt={i18n.language === 'id' ? item.caption : item.caption_en} 
+                    className="transform group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  
+                  {/* Overlay Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-purple-dark/80 via-purple-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3 sm:p-4">
+                    <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <ZoomIn className="text-white mb-2" size={20} />
+                      <p className="text-white font-sans text-xs sm:text-sm line-clamp-2">
+                        {i18n.language === 'id' ? item.caption : item.caption_en}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </AnimatePresence>
         </motion.div>
 

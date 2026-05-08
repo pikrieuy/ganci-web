@@ -274,125 +274,161 @@ export const galleryItems = [
     image: '/foto_keychain/foto-1.jpg',
     category: 'sketsa',
     caption: 'Keychain sketsa untuk hadiah wisuda',
-    caption_en: 'Sketch keychain for graduation gift'
+    caption_en: 'Sketch keychain for graduation gift',
+    width: 400,
+    height: 500
   },
   {
     id: 2,
     image: '/foto_keychain/foto-4.jpg',
     category: 'color',
     caption: 'Full color request dengan background pink',
-    caption_en: 'Full color request with pink background'
+    caption_en: 'Full color request with pink background',
+    width: 400,
+    height: 400
   },
   {
     id: 3,
     image: '/foto_keychain/foto-7.jpg',
     category: 'couple',
     caption: 'Keychain couple anniversary ke-2 tahun',
-    caption_en: '2nd anniversary couple keychain'
+    caption_en: '2nd anniversary couple keychain',
+    width: 400,
+    height: 600
   },
   {
     id: 4,
     image: '/foto_keychain/foto-9.jpg',
     category: 'anime',
     caption: 'Anime style request: Gojo Satoru!',
-    caption_en: 'Anime style request: Gojo Satoru!'
+    caption_en: 'Anime style request: Gojo Satoru!',
+    width: 400,
+    height: 450
   },
   {
     id: 5,
     image: '/foto_keychain/foto-2.jpg',
     category: 'sketsa',
     caption: 'Sketsa wajah detail tinggi',
-    caption_en: 'High detail face sketch'
+    caption_en: 'High detail face sketch',
+    width: 400,
+    height: 550
   },
   {
     id: 6,
     image: '/foto_keychain/foto-5.jpg',
     category: 'color',
     caption: 'Keychain warna warni untuk bestie',
-    caption_en: 'Colorful keychain for bestie'
+    caption_en: 'Colorful keychain for bestie',
+    width: 400,
+    height: 380
   },
   {
     id: 7,
     image: '/foto_keychain/foto-3.jpg',
     category: 'sketsa',
     caption: 'Sketsa B&W vibes — clean dan elegan',
-    caption_en: 'B&W sketch vibes — clean and elegant'
+    caption_en: 'B&W sketch vibes — clean and elegant',
+    width: 400,
+    height: 480
   },
   {
     id: 8,
     image: '/foto_keychain/foto-6.jpg',
     category: 'color',
     caption: 'Full color dengan tone lembut, super gemes',
-    caption_en: 'Full color with soft tones, super cute'
+    caption_en: 'Full color with soft tones, super cute',
+    width: 400,
+    height: 420
   },
   {
     id: 9,
     image: '/foto_keychain/foto-8.jpg',
     category: 'couple',
     caption: 'Couple keychain buat hadiah ulang tahun',
-    caption_en: 'Couple keychain for a birthday gift'
+    caption_en: 'Couple keychain for a birthday gift',
+    width: 400,
+    height: 520
   },
   {
     id: 10,
     image: '/foto_keychain/foto-9.jpg',
     category: 'anime',
     caption: 'Anime style request — detail mata bikin hidup',
-    caption_en: 'Anime style request — lively eye details'
+    caption_en: 'Anime style request — lively eye details',
+    width: 400,
+    height: 470
   },
   {
     id: 11,
     image: '/foto_keychain/foto-1.jpg',
     category: 'sketsa',
-    caption: 'Sketsa portrait yang “soft” cocok buat couple',
-    caption_en: 'Soft portrait sketch perfect for couples'
+    caption: 'Sketsa portrait yang "soft" cocok buat couple',
+    caption_en: 'Soft portrait sketch perfect for couples',
+    width: 400,
+    height: 490
   },
   {
     id: 12,
     image: '/foto_keychain/foto-4.jpg',
     category: 'color',
     caption: 'Request warna cerah biar standout di tas',
-    caption_en: 'Bright color request to stand out on your bag'
+    caption_en: 'Bright color request to stand out on your bag',
+    width: 400,
+    height: 400
   },
   {
     id: 13,
     image: '/foto_keychain/foto-7.jpg',
     category: 'couple',
     caption: 'Matching keychain untuk anniversary dinner',
-    caption_en: 'Matching keychains for an anniversary dinner'
+    caption_en: 'Matching keychains for an anniversary dinner',
+    width: 400,
+    height: 580
   },
   {
     id: 14,
     image: '/foto_keychain/foto-2.jpg',
     category: 'sketsa',
     caption: 'Sketsa close-up: detail rambut & shading rapi',
-    caption_en: 'Close-up sketch: neat hair details & shading'
+    caption_en: 'Close-up sketch: neat hair details & shading',
+    width: 400,
+    height: 510
   },
   {
     id: 15,
     image: '/foto_keychain/foto-5.jpg',
     category: 'color',
     caption: 'Full color bestie set — lucu kalau dibuat sepasang',
-    caption_en: 'Full color bestie set — cute as a pair'
+    caption_en: 'Full color bestie set — cute as a pair',
+    width: 400,
+    height: 390
   },
   {
     id: 16,
     image: '/foto_keychain/foto-8.jpg',
     category: 'couple',
     caption: 'Couple keychain dengan pose favorit kalian',
-    caption_en: 'Couple keychain with your favorite pose'
+    caption_en: 'Couple keychain with your favorite pose',
+    width: 400,
+    height: 530
   },
   {
     id: 17,
     image: '/foto_keychain/foto-3.jpg',
     category: 'anime',
-    caption: 'Anime style: ekspresi dibuat lebih “kawaii”',
-    caption_en: 'Anime style: extra “kawaii” expression'
+    caption: 'Anime style: ekspresi dibuat lebih "kawaii"',
+    caption_en: 'Anime style: extra "kawaii" expression',
+    width: 400,
+    height: 460
   },
   {
     id: 18,
     image: '/foto_keychain/foto-6.jpg',
     category: 'sketsa',
     caption: 'Sketsa dengan vibe minimalis, cocok buat daily',
-    caption_en: 'Minimalist sketch vibe, perfect for daily use'
+    caption_en: 'Minimalist sketch vibe, perfect for daily use',
+    width: 400,
+    height: 440
   }
 ];
