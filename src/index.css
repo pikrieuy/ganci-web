@@ -126,13 +126,23 @@
     gap: var(--space-sm);
   }
   
-  @media (min-width: 480px) {
+  /* Mobile landscape - show 2 columns */
+  @media (min-width: 400px) {
+    .masonry-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-sm);
+    }
+  }
+  
+  /* Small tablet */
+  @media (min-width: 640px) {
     .masonry-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: var(--space-md);
     }
   }
   
+  /* Tablet */
   @media (min-width: 768px) {
     .masonry-grid {
       grid-template-columns: repeat(3, 1fr);
@@ -140,6 +150,7 @@
     }
   }
   
+  /* Desktop */
   @media (min-width: 1024px) {
     .masonry-grid {
       grid-template-columns: repeat(4, 1fr);
