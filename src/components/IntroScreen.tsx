@@ -44,8 +44,8 @@ export default function IntroScreen({ children }) {
                   style={{
                     position: "absolute",
                     inset: 0,
-                    // Bright soft pink gradient
-                    background: "linear-gradient(135deg, #fdf2f8 0%, #fbcfe8 50%, #f9a8d4 100%)",
+                    // Transparent background for iPhone compatibility
+                    background: "transparent",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -70,7 +70,9 @@ export default function IntroScreen({ children }) {
                       width: "90vw",
                       maxWidth: "600px",
                       objectFit: "contain",
-                      filter: "drop-shadow(0 20px 40px rgba(236, 72, 153, 0.4))",
+                      // Remove drop shadow and make logo transparent
+                      filter: "none",
+                      mixBlendMode: "normal",
                       zIndex: 20
                     }}
                   />
