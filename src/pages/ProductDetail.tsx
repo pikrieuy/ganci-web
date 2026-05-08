@@ -10,6 +10,7 @@ import {
   Ruler,
   ChevronLeft,
   ChevronRight,
+  Frown,
 } from 'lucide-react';
 import { products, casingShapes, formatPrice, getWhatsAppLink } from '../data/mockData';
 
@@ -24,8 +25,10 @@ const ProductDetail = () => {
   if (!product) {
     return (
       <div className="pt-28 text-center min-h-screen flex flex-col items-center justify-center">
-        <div className="text-6xl mb-4">😢</div>
-        <h2 className="font-playfair text-2xl text-purple-dark mb-4">
+        <div className="mb-4 flex justify-center text-gray-400">
+          <Frown size={64} />
+        </div>
+        <h2 className="font-sans text-2xl text-purple-dark mb-4">
           {lang === 'id' ? 'Produk tidak ditemukan' : 'Product not found'}
         </h2>
         <Link to="/catalog" className="btn-primary">
@@ -53,13 +56,31 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="pt-20 md:pt-24">
-      {/* Back button */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-4">
+    <div className="pt-24 pb-16 min-h-screen bg-pink-light/30 relative">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+        <div className="text-center mb-12">
+          <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            className="flex items-center justify-center gap-3 mb-2"
+          >
+            <Package size={36} className="text-pink-main" />
+            <h1 className="heading-section mb-0">{name}</h1>
+          </motion.div>
+          <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.1 }}
+            className="subheading-section"
+          >
+            {desc}
+          </motion.p>
+        </div>
+
         <Link
           to="/catalog"
           className="inline-flex items-center gap-2 text-gray-text hover:text-pink-main 
-                   font-nunito font-semibold text-sm transition-colors duration-300"
+                   font-sans font-semibold text-sm transition-colors duration-300"
         >
           <ArrowLeft size={16} />
           {t('productDetail.backToCatalog')}
@@ -114,7 +135,7 @@ const ProductDetail = () => {
 
               {/* Photo Counter */}
               <div className="absolute bottom-3 right-3 px-3 py-1 bg-black/40 backdrop-blur-sm 
-                            rounded-full text-white text-xs font-nunito">
+                            rounded-full text-white text-xs font-sans">
                 {selectedPhoto + 1} / {product.photos.length}
               </div>
             </div>
@@ -150,20 +171,20 @@ const ProductDetail = () => {
           >
             {/* Category Badge */}
             <div className="inline-flex self-start px-3 py-1 bg-pink-light rounded-full 
-                          text-sm font-nunito font-semibold text-pink-main mb-3">
+                          text-sm font-sans font-semibold text-pink-main mb-3">
               {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
             </div>
 
-            <h1 className="font-playfair font-bold text-3xl md:text-4xl text-purple-dark mb-4">
+            <h1 className="font-sans font-bold text-3xl md:text-4xl text-purple-dark mb-4">
               {name}
             </h1>
 
             {/* Price */}
             <div className="mb-6">
-              <p className="text-sm text-gray-text font-nunito mb-1">
+              <p className="text-sm text-gray-text font-sans mb-1">
                 {t('productDetail.price')}
               </p>
-              <p className="font-nunito font-bold text-3xl text-pink-main">
+              <p className="font-sans font-bold text-3xl text-pink-main">
                 {product.price === 0
                   ? lang === 'id'
                     ? 'Harga Nego'
@@ -174,10 +195,10 @@ const ProductDetail = () => {
 
             {/* Description */}
             <div className="mb-6">
-              <h3 className="font-nunito font-bold text-purple-dark mb-2">
+              <h3 className="font-sans font-bold text-purple-dark mb-2">
                 {t('productDetail.description')}
               </h3>
-              <p className="font-nunito text-gray-text leading-relaxed">{desc}</p>
+              <p className="font-sans text-gray-text leading-relaxed">{desc}</p>
             </div>
 
             {/* Details Grid */}
@@ -185,35 +206,35 @@ const ProductDetail = () => {
               <div className="glass-card p-4">
                 <div className="flex items-center gap-2 mb-1">
                   <Clock size={16} className="text-pink-main" />
-                  <span className="text-xs text-gray-text font-nunito">
+                  <span className="text-xs text-gray-text font-sans">
                     {t('productDetail.duration')}
                   </span>
                 </div>
-                <p className="font-nunito font-bold text-purple-dark text-sm">{duration}</p>
+                <p className="font-sans font-bold text-purple-dark text-sm">{duration}</p>
               </div>
               <div className="glass-card p-4">
                 <div className="flex items-center gap-2 mb-1">
                   <Package size={16} className="text-pink-main" />
-                  <span className="text-xs text-gray-text font-nunito">
+                  <span className="text-xs text-gray-text font-sans">
                     {t('productDetail.material')}
                   </span>
                 </div>
-                <p className="font-nunito font-bold text-purple-dark text-sm">{material}</p>
+                <p className="font-sans font-bold text-purple-dark text-sm">{material}</p>
               </div>
               <div className="glass-card p-4 col-span-2">
                 <div className="flex items-center gap-2 mb-1">
                   <Ruler size={16} className="text-pink-main" />
-                  <span className="text-xs text-gray-text font-nunito">
+                  <span className="text-xs text-gray-text font-sans">
                     {t('productDetail.size')}
                   </span>
                 </div>
-                <p className="font-nunito font-bold text-purple-dark text-sm">{product.size}</p>
+                <p className="font-sans font-bold text-purple-dark text-sm">{product.size}</p>
               </div>
             </div>
 
             {/* Casing Options */}
             <div className="mb-8">
-              <h3 className="font-nunito font-bold text-purple-dark mb-3">
+              <h3 className="font-sans font-bold text-purple-dark mb-3">
                 {t('productDetail.casingOptions')}
               </h3>
               <div className="flex gap-3">
@@ -224,7 +245,7 @@ const ProductDetail = () => {
                              bg-pink-light/50 border border-pink-light"
                   >
                     <span className="text-xl">{shape.icon}</span>
-                    <span className="text-xs font-nunito text-gray-text">
+                    <span className="text-xs font-sans text-gray-text">
                       {lang === 'id' ? shape.name_id : shape.name_en}
                     </span>
                   </div>

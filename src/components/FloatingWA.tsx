@@ -7,14 +7,14 @@ const FloatingWA = () => {
   const { t, i18n } = useTranslation();
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
+    <div className="fixed bottom-[calc(1.5rem+env(safe-area-inset-bottom))] right-[calc(1.5rem+env(safe-area-inset-right))] z-50 flex flex-col items-end gap-2">
       {/* Tooltip */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8, x: 10 }}
         animate={{ opacity: 1, scale: 1, x: 0 }}
         transition={{ delay: 2, duration: 0.4 }}
         className="hidden md:block bg-white px-4 py-2 rounded-full shadow-lg 
-                   font-nunito text-sm text-purple-dark font-semibold
+                   font-sans text-sm text-purple-dark font-semibold
                    border border-pink-light"
       >
         {t('floatingWa.tooltip')}

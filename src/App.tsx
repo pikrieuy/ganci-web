@@ -13,6 +13,7 @@ import ProductDetail from './pages/ProductDetail';
 import HowToOrder from './pages/HowToOrder';
 import Gallery from './pages/Gallery';
 import About from './pages/About';
+import IntroScreen from './components/IntroScreen';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -51,7 +52,9 @@ const AppContent = () => {
 function App() {
   return (
     <Router>
-      <AppContent />
+      <IntroScreen>
+        <AppContent />
+      </IntroScreen>
     </Router>
   );
 }

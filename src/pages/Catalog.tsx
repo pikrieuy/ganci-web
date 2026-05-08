@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Search, Palette } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import { products, categories, casingShapes } from '../data/mockData';
 
@@ -16,51 +17,55 @@ const Catalog = () => {
   });
 
   return (
-    <div className="pt-20 md:pt-24">
-      {/* Header */}
-      <section className="section-padding bg-gradient-hero pb-8">
-        <div className="max-w-7xl mx-auto text-center">
+    <div className="pt-24 pb-16 min-h-screen bg-pink-light/30 relative">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+        <div className="text-center mb-12">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            className="flex items-center justify-center gap-3 mb-2"
           >
-            <h1 className="heading-section">{t('catalog.title')}</h1>
-            <p className="subheading-section">{t('catalog.subtitle')}</p>
+            <Palette size={36} className="text-pink-main" />
+            <h1 className="heading-section mb-0">{t('catalog.title')}</h1>
           </motion.div>
+          <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.1 }}
+            className="subheading-section"
+          >
+            {t('catalog.subtitle')}
+          </motion.p>
         </div>
-      </section>
 
-      {/* Filter */}
-      <section className="px-4 md:px-8 -mt-4 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="flex flex-wrap justify-center gap-2 md:gap-3"
-          >
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className={`px-4 md:px-6 py-2 rounded-full font-nunito font-semibold text-sm 
-                           transition-all duration-300 shadow-sm ${
-                  activeCategory === cat.id
-                    ? 'bg-pink-main text-white shadow-md scale-105'
-                    : 'bg-white text-gray-text hover:bg-pink-light hover:text-purple-dark border border-pink-light'
-                }`}
-              >
-                {lang === 'id' ? cat.name_id : cat.name_en}
-              </button>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+        {/* Filter */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-2 md:gap-3 mb-10"
+        >
+          {categories.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => setActiveCategory(cat.id)}
+              className={`px-4 md:px-6 py-2 rounded-full font-sans font-semibold text-sm 
+                         transition-all duration-300 shadow-sm
+                         focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-pink-main/20 focus-visible:ring-offset-2 ${
+                activeCategory === cat.id
+                  ? 'bg-pink-main text-white shadow-md scale-105'
+                  : 'bg-white text-gray-text hover:bg-pink-light hover:text-purple-dark border border-pink-light'
+              }`}
+            >
+              {lang === 'id' ? cat.name_id : cat.name_en}
+            </button>
+          ))}
+        </motion.div>
+      </div>
 
       {/* Product Grid */}
-      <section className="section-padding">
-        <div className="max-w-7xl mx-auto">
+      <section className="section-padding pt-0 bg-white">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
           <AnimatePresence mode="wait">
             {filteredProducts.length > 0 ? (
               <motion.div
@@ -83,8 +88,10 @@ const Catalog = () => {
                 animate={{ opacity: 1 }}
                 className="text-center py-20"
               >
-                <div className="text-5xl mb-4">🔍</div>
-                <p className="font-nunito text-gray-text text-lg">
+                <div className="mb-4 flex justify-center text-gray-400">
+                  <Search size={48} />
+                </div>
+                <p className="font-sans text-gray-text text-lg">
                   {t('catalog.noProducts')}
                 </p>
               </motion.div>
@@ -95,7 +102,7 @@ const Catalog = () => {
 
       {/* Casing Shapes */}
       <section className="section-padding bg-pink-light/30">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center px-4 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +124,7 @@ const Catalog = () => {
                 className="glass-card p-6 cursor-default"
               >
                 <div className="text-4xl mb-3">{shape.icon}</div>
-                <p className="font-nunito font-bold text-purple-dark text-sm">
+                <p className="font-sans font-bold text-purple-dark text-sm">
                   {lang === 'id' ? shape.name_id : shape.name_en}
                 </p>
               </motion.div>

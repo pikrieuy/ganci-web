@@ -17,13 +17,14 @@ export default {
           dark: '#4A148C',
         },
         gray: {
-          text: '#757575',
+          text: '#575757',
         },
       },
       fontFamily: {
         playfair: ['"Playfair Display"', 'serif'],
         nunito: ['Nunito', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
+        sans: ['Outfit', 'sans-serif'],
       },
       animation: {
         'pulse-slow': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',

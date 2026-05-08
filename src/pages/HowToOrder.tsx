@@ -9,6 +9,8 @@ import {
   Eye,
   Truck,
   Heart,
+  ShoppingBag,
+  ClipboardList,
 } from 'lucide-react';
 import { getWhatsAppLink } from '../data/mockData';
 
@@ -30,49 +32,54 @@ const HowToOrder = () => {
   ];
 
   return (
-    <div className="pt-20 md:pt-24">
-      {/* Header */}
-      <section className="section-padding bg-gradient-hero pb-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="heading-section">{t('howToOrder.title')}</h1>
-            <p className="subheading-section">{t('howToOrder.subtitle')}</p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Steps */}
-      <section className="section-padding bg-white">
+    <div className="pt-24 pb-16 min-h-screen bg-pink-light/30 relative">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
         <div className="max-w-3xl mx-auto relative">
-          {/* Vertical Line */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-pink-light 
-                        md:-translate-x-1/2 hidden md:block" />
-          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-pink-light md:hidden" />
+          <div className="text-center mb-12">
+            <motion.div
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              className="flex items-center justify-center gap-3 mb-2"
+            >
+              <ClipboardList size={36} className="text-pink-main" />
+              <h1 className="heading-section mb-0">{t('howToOrder.title')}</h1>
+            </motion.div>
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.1 }}
+              className="subheading-section"
+            >
+              {t('howToOrder.subtitle')}
+            </motion.p>
+          </div>
 
-          {steps.map((step, index) => {
-            const Icon = stepIcons[index];
-            const isLeft = index % 2 === 0;
+          <div className="relative">
+            {/* Vertical Line */}
+            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-pink-light 
+                          md:-translate-x-1/2 hidden md:block" />
+            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-pink-light md:hidden" />
 
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative flex items-start gap-4 md:gap-0 mb-8 md:mb-12 ${
-                  isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
-              >
+            {steps.map((step, index) => {
+              const Icon = stepIcons[index];
+              const isLeft = index % 2 === 0;
+
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: '-50px' }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className={`relative flex items-start gap-4 md:gap-0 mb-8 md:mb-12 ${
+                    isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
+                >
                 {/* Mobile Step Number */}
                 <div className="md:hidden flex-shrink-0 relative z-10">
                   <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${stepColors[index]} 
                                 flex items-center justify-center shadow-lg`}>
-                    <span className="text-white font-nunito font-bold text-sm">
+                    <span className="text-white font-sans font-bold text-sm">
                       {index + 1}
                     </span>
                   </div>
@@ -86,11 +93,11 @@ const HowToOrder = () => {
                                     flex items-center justify-center shadow-md flex-shrink-0`}>
                         <Icon size={20} className="text-white" />
                       </div>
-                      <h3 className="font-nunito font-bold text-purple-dark text-lg">
+                      <h3 className="font-sans font-bold text-purple-dark text-lg">
                         {step.title}
                       </h3>
                     </div>
-                    <p className="font-nunito text-gray-text text-sm leading-relaxed">
+                    <p className="font-sans text-gray-text text-sm leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -100,7 +107,7 @@ const HowToOrder = () => {
                 <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 z-10">
                   <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${stepColors[index]} 
                                 flex items-center justify-center shadow-lg border-4 border-white`}>
-                    <span className="text-white font-nunito font-bold text-sm">
+                    <span className="text-white font-sans font-bold text-sm">
                       {index + 1}
                     </span>
                   </div>
@@ -108,28 +115,31 @@ const HowToOrder = () => {
 
                 {/* Desktop Spacer */}
                 <div className="hidden md:block md:w-[calc(50%-2rem)]" />
-              </motion.div>
-            );
-          })}
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
-      </section>
+      </div>
 
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-b from-white to-pink-light/30">
-        <div className="max-w-xl mx-auto text-center">
+        <div className="max-w-xl mx-auto text-center px-4 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="text-5xl mb-4">🌸</div>
-            <h2 className="font-playfair font-bold text-2xl md:text-3xl text-purple-dark mb-4">
+            <div className="mb-6 flex justify-center">
+              <ShoppingBag size={48} className="text-pink-main" />
+            </div>
+            <h2 className="font-sans font-bold text-2xl md:text-3xl text-purple-dark mb-4">
               {lang === 'id' ? 'Siap Order Keychain-mu?' : 'Ready to Order Your Keychain?'}
             </h2>
-            <p className="font-nunito text-gray-text mb-8">
+            <p className="font-sans text-gray-text mb-8">
               {lang === 'id'
-                ? 'Langsung chat kami di WhatsApp ya! Kami siap bantu kamu bikin keychain impianmu 💕'
-                : "Chat us on WhatsApp right away! We're ready to help you create your dream keychain 💕"}
+                ? 'Langsung chat kami di WhatsApp ya! Kami siap bantu kamu bikin keychain impianmu.'
+                : "Chat us on WhatsApp right away! We're ready to help you create your dream keychain."}
             </p>
             <a
               href={getWhatsAppLink('', lang)}

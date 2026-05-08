@@ -17,7 +17,7 @@ const LanguageSwitcher = () => {
       className="flex items-center gap-1.5 px-3 py-1.5 rounded-full 
                  bg-pink-light border border-pink-medium 
                  hover:bg-pink-medium transition-all duration-300
-                 text-sm font-nunito font-semibold text-purple-dark"
+                 text-sm font-sans font-semibold text-purple-dark"
       aria-label="Switch language"
     >
       <span className={`transition-opacity duration-200 ${isID ? 'opacity-100' : 'opacity-50'}`}>

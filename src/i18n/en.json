@@ -8,17 +8,17 @@
   },
   "hero": {
     "tagline": "Custom Handmade Keychains",
-    "subtitle": "Capture your special moments in a keychain made with love 🌸",
+    "subtitle": "Capture your special moments in a keychain made with love",
     "ctaCatalog": "View Products",
     "ctaOrder": "Order via WA"
   },
   "brandStory": {
-    "title": "Meet the Team ✨",
-    "description": "Piko & Lea are the creative duo behind every unique keychain you see. Piko as the Illustrator turns ideas into beautiful sketches, while Lea as the Finisher perfects every detail into a piece of art ready to accompany you everywhere.",
+    "title": "Behind the Keychains",
+    "description": "We’re the creative duo behind every unique keychain you see. One of us turns your ideas into beautiful sketches, while the other perfects every detail into a little piece of art ready to follow you everywhere.",
     "cta": "More About Us"
   },
   "featuredProducts": {
-    "title": "Featured Products 🌟",
+    "title": "Featured Products",
     "subtitle": "Best-selling picks loved by our customers",
     "viewAll": "View All Products",
     "startingFrom": "Starting from",
@@ -27,7 +27,7 @@
     "duration": "Estimated"
   },
   "orderProcess": {
-    "title": "How to Order 📝",
+    "title": "How to Order",
     "subtitle": "Super easy! Just 4 simple steps",
     "steps": [
       {
@@ -50,11 +50,11 @@
     "cta": "See Full Order Guide"
   },
   "testimonials": {
-    "title": "What They Say 💕",
+    "title": "What They Say",
     "subtitle": "Honest reviews from customers who already ordered"
   },
   "catalog": {
-    "title": "Product Catalog 🎨",
+    "title": "Product Catalog",
     "subtitle": "Choose the keychain style you love the most",
     "filterAll": "All",
     "filterSketsa": "Sketch B&W",
@@ -82,7 +82,7 @@
     "size": "Size"
   },
   "howToOrder": {
-    "title": "How to Order 📋",
+    "title": "How to Order",
     "subtitle": "Follow these easy steps to order your dream custom keychain",
     "steps": [
       {
@@ -115,23 +115,23 @@
       },
       {
         "title": "Follow Up",
-        "description": "We'd love your review + photo wearing the product! 🥰"
+        "description": "We'd love your review + photo wearing the product!"
       }
     ],
     "ctaOrder": "Start Ordering Now"
   },
   "footer": {
-    "tagline": "Custom handmade keychains made with love from Bandung 🌸",
+    "tagline": "Custom handmade keychains made with love from Bandung",
     "quickLinks": "Menu",
     "contact": "Contact Us",
     "followUs": "Follow Us",
-    "copyright": "© 2026 Piko & Lea. Made with 💕"
+    "copyright": "© 2026 Piko & Lea. Made with love"
   },
   "floatingWa": {
     "tooltip": "Chat us on WhatsApp!"
   },
   "galleryPage": {
-    "title": "Artwork Gallery 🖼️",
+    "title": "Artwork Gallery",
     "subtitle": "Collection of custom keychains we've made for our loyal customers",
     "filterAll": "All",
     "filterSketsa": "Sketch",
@@ -140,7 +140,7 @@
     "filterAnime": "Anime"
   },
   "aboutPage": {
-    "title": "About Us 🌸",
+    "title": "About Us",
     "subtitle": "Get to know Piko & Lea closer",
     "whoAreWe": "Who Are We?",
     "whoAreWeDesc": "We are two students from Binus University Bandung who have a huge passion for arts and crafts. Starting from our hobby of drawing and making accessories, we decided to build 'Piko & Lea' as a platform for our creativity.",

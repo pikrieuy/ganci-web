@@ -36,8 +36,12 @@ Mengikuti **roadmap** yang sudah didefinisikan di PRD, saya akan mengerjakan sec
 
 ## Open Questions
 
-1. **Scope eksekusi saat ini** — Apakah Anda ingin saya mengerjakan **semua fase sekaligus** (Fase 1-4), atau bertahap per fase dengan review di antara?
-2. **Domain custom** — Apakah sudah ada nama domain yang direncanakan?
+1. **Animasi Intro (Grid Pixelate Wipe)**:
+   - **Konten Scene A & B**: Apa teks atau logo yang ingin ditampilkan di "Scene A" (layar awal/splash) dan "Scene B" (halaman utama)? Apakah kita akan menggunakan tulisan "Piko & Lea" atau sekadar logo?
+   - **State Management**: Apakah animasi ini hanya muncul **sekali saja** saat pengunjung pertama kali membuka web (menggunakan `sessionStorage`), atau muncul setiap kali mereka kembali ke halaman utama / me-refresh browser?
+   - **Assets & Warna**: Apakah ada warna background khusus yang diinginkan untuk Scene A (misalnya tema ungu/pink Piko & Lea) atau cukup gelap/hitam?
+   - **Responsivitas**: Karena demo bawaan komponen menggunakan ukuran fix (1280x720), saya akan menyesuaikannya agar responsif (`100vw` x `100vh`). Apakah ini sesuai?
+2. **Kesesuaian dengan Typescript & shadcn**: Proyek kita saat ini menggunakan Javascript (JSX), bukan Typescript, dan tidak memakai shadcn CLI. Saya berencana menempatkan komponen ini di `src/components/ui/` dan mengubahnya menjadi `.jsx` standar agar sesuai dengan struktur kita. Apakah Anda setuju?
 
 ---
 
@@ -144,6 +148,19 @@ Mengikuti **roadmap** yang sudah didefinisikan di PRD, saya akan mengerjakan sec
 - Cerita brand (F-23)
 - Link Instagram (F-24)
 - Info lokasi Kampus Binus, Bandung (F-25)
+
+  - Info lokasi Kampus Binus, Bandung (F-25)
+
+---
+
+### Fase 2.5 — Intro Animation (Grid Pixelate Wipe)
+
+> Sesuai permintaan, Fase 3 ditunda dan kita berfokus pada tampilan frontend awal.
+
+- **[NEW]** `src/components/ui/grid-pixelate-wipe.jsx` — Komponen transisi Remotion (diubah dari TSX ke JSX agar sesuai dengan proyek kita).
+- **[NEW]** `src/components/IntroScreen.jsx` — Komponen wrapper yang menjalankan Scene A (Splash Screen Piko & Lea) dan bertransisi ke Scene B (Website Utama).
+- **[MODIFY]** `src/App.jsx` — Membungkus halaman utama dengan animasi ini.
+- **Dependencies** — Install `remotion` dan `@remotion/player`.
 
 ---
 

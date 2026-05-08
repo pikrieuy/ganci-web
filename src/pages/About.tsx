@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { MapPin, Heart, Palette, Gift } from 'lucide-react';
+import { MapPin, Heart, Palette, Gift, Users } from 'lucide-react';
 import { settings } from '../data/mockData';
 
 const InstagramIcon = ({ size = 24, className = "" }) => (
@@ -30,19 +30,23 @@ const About = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="pt-24 pb-16 min-h-screen bg-pink-light/20"
+      className="pt-24 pb-16 min-h-screen bg-pink-light/30 relative"
     >
-      <div className="max-w-5xl mx-auto px-4 md:px-8">
+      
+      <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
         
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <motion.h1 
+        <div className="text-center mb-12">
+          <motion.div 
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className="heading-section"
+            className="flex items-center justify-center gap-3 mb-2"
           >
-            {t('aboutPage.title')}
-          </motion.h1>
+            <Users size={36} className="text-pink-main" />
+            <h1 className="heading-section mb-0">
+              {t('aboutPage.title')}
+            </h1>
+          </motion.div>
           <motion.p 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -58,16 +62,16 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-0">
             <div className="h-64 md:h-auto bg-pink-light relative overflow-hidden">
               <img 
-                src="https://placehold.co/800x800/FCE4EC/4A148C?text=Piko+%26+Lea" 
+                src="/foto_keychain/foto-8.jpg" 
                 alt="Piko & Lea" 
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="p-8 md:p-12 flex flex-col justify-center">
-              <h2 className="font-playfair text-3xl font-bold text-purple-dark mb-4">
+              <h2 className="font-sans text-3xl font-bold text-purple-dark mb-4">
                 {t('aboutPage.whoAreWe')}
               </h2>
-              <p className="text-gray-text font-nunito text-lg leading-relaxed mb-6">
+              <p className="text-gray-text font-sans text-lg leading-relaxed mb-6">
                 {t('aboutPage.whoAreWeDesc')}
               </p>
               <div className="flex gap-4">
@@ -95,16 +99,16 @@ const About = () => {
           >
             <div className="w-32 h-32 mx-auto rounded-full bg-pink-light mb-6 overflow-hidden border-4 border-white shadow-md">
               <img 
-                src="https://placehold.co/400x400/F8BBD9/4A148C?text=Piko" 
+                src="/foto_keychain/foto-2.jpg" 
                 alt="Piko" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="font-playfair text-2xl font-bold text-purple-dark mb-1">Piko</h3>
+            <h3 className="font-sans text-2xl font-bold text-purple-dark mb-1">Piko</h3>
             <p className="text-pink-main font-semibold mb-4 flex items-center justify-center gap-2">
               <Palette size={18} /> {t('aboutPage.pikoRole')}
             </p>
-            <p className="text-gray-text font-nunito leading-relaxed">
+            <p className="text-gray-text font-sans leading-relaxed">
               {t('aboutPage.pikoDesc')}
             </p>
           </motion.div>
@@ -119,16 +123,16 @@ const About = () => {
           >
             <div className="w-32 h-32 mx-auto rounded-full bg-pink-light mb-6 overflow-hidden border-4 border-white shadow-md">
               <img 
-                src="https://placehold.co/400x400/E1BEE7/4A148C?text=Lea" 
+                src="/foto_keychain/foto-5.jpg" 
                 alt="Lea" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="font-playfair text-2xl font-bold text-purple-dark mb-1">Lea</h3>
+            <h3 className="font-sans text-2xl font-bold text-purple-dark mb-1">Lea</h3>
             <p className="text-pink-main font-semibold mb-4 flex items-center justify-center gap-2">
               <Gift size={18} /> {t('aboutPage.leaRole')}
             </p>
-            <p className="text-gray-text font-nunito leading-relaxed">
+            <p className="text-gray-text font-sans leading-relaxed">
               {t('aboutPage.leaDesc')}
             </p>
           </motion.div>
@@ -146,10 +150,10 @@ const About = () => {
               <MapPin size={28} />
             </div>
             <div>
-              <h3 className="font-playfair text-xl font-bold text-purple-dark mb-2">
+              <h3 className="font-sans text-xl font-bold text-purple-dark mb-2">
                 {t('aboutPage.location')}
               </h3>
-              <p className="text-gray-text font-nunito">
+              <p className="text-gray-text font-sans">
                 {t('aboutPage.locationDesc')}
               </p>
             </div>
@@ -168,10 +172,10 @@ const About = () => {
               <InstagramIcon size={28} />
             </div>
             <div>
-              <h3 className="font-playfair text-xl font-bold mb-2 flex items-center gap-2">
-                Instagram <span className="text-sm font-nunito font-normal opacity-80 group-hover:opacity-100 transition-opacity">{settings.ig_handle}</span>
+              <h3 className="font-sans text-xl font-bold mb-2 flex items-center gap-2">
+                Instagram <span className="text-sm font-sans font-normal opacity-80 group-hover:opacity-100 transition-opacity">{settings.ig_handle}</span>
               </h3>
-              <p className="font-nunito text-white/80">
+              <p className="font-sans text-white/80">
                 {t('aboutPage.instagram')}
               </p>
             </div>

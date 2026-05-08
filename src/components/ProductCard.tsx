@@ -33,7 +33,7 @@ const ProductCard = ({ product, index = 0 }) => {
             {product.is_featured && (
               <div className="absolute top-3 left-3 flex items-center gap-1 px-3 py-1 
                             bg-gradient-to-r from-pink-main to-purple-accent
-                            text-white text-xs font-nunito font-bold rounded-full shadow-lg">
+                            text-white text-xs font-sans font-bold rounded-full shadow-lg">
                 <Star size={12} fill="currentColor" />
                 {t('featuredProducts.bestSeller')}
               </div>
@@ -52,21 +52,21 @@ const ProductCard = ({ product, index = 0 }) => {
 
           {/* Content */}
           <div className="p-4">
-            <h3 className="font-nunito font-bold text-purple-dark text-base mb-1 
+            <h3 className="font-sans font-bold text-purple-dark text-base mb-1 
                          group-hover:text-pink-main transition-colors duration-300">
               {name}
             </h3>
 
             <div className="flex items-center justify-between mt-2">
               <div>
-                <p className="text-xs text-gray-text font-nunito">
+                <p className="text-xs text-gray-text font-sans">
                   {t('featuredProducts.startingFrom')}
                 </p>
-                <p className="font-nunito font-bold text-pink-main text-lg">
+                <p className="font-sans font-bold text-pink-main text-lg">
                   {product.price === 0 ? 'Custom' : formatPrice(product.price)}
                 </p>
               </div>
-              <div className="flex items-center gap-1 text-gray-text text-xs font-nunito">
+              <div className="flex items-center gap-1 text-gray-text text-xs font-sans">
                 <Clock size={12} />
                 <span>{duration}</span>
               </div>
