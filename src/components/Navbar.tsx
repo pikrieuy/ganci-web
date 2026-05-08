@@ -52,11 +52,11 @@ const Navbar = () => {
                 <img
                   src="/logo_kepala.png"
                   alt="KriyaCustom"
-                  className="h-14 md:h-16 lg:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105 mix-blend-multiply"
+                  className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105 mix-blend-multiply"
                 />
                 <span
                   className={cn(
-                    "font-playfair font-bold text-2xl md:text-3xl text-slate-800 group-hover:text-pink-main tracking-tight leading-none",
+                    "font-playfair font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-slate-800 group-hover:text-pink-main tracking-tight leading-none",
                     "transition-all duration-300 ease-in-out",
                     isScrolled && "opacity-0 max-w-0 -mr-3 pointer-events-none overflow-hidden"
                   )}
@@ -69,25 +69,25 @@ const Navbar = () => {
               <button
                 onClick={() => setMenuState(!menuState)}
                 aria-label={menuState ? 'Close Menu' : 'Open Menu'}
-                className="relative z-50 -m-2.5 block cursor-pointer p-2.5 lg:hidden"
+                className="relative z-50 -m-2.5 block cursor-pointer p-2.5 lg:hidden min-h-[44px] min-w-[44px] flex items-center justify-center"
               >
                 {menuState ? (
-                  <X className="m-auto size-6 text-purple-dark transition-all duration-200" />
+                  <X className="size-6 text-purple-dark transition-all duration-200" />
                 ) : (
-                  <Equal className="m-auto size-6 text-purple-dark transition-all duration-200" />
+                  <Equal className="size-6 text-purple-dark transition-all duration-200" />
                 )}
               </button>
             </div>
 
             {/* Desktop Navigation */}
             <div className="absolute inset-0 m-auto hidden size-fit lg:block">
-              <ul className="flex gap-8 text-base font-medium font-sans">
+              <ul className="flex gap-6 xl:gap-8 text-base font-medium font-sans">
                 {navLinks.map((item, index) => (
                   <li key={index}>
                     <Link
                       to={item.path}
                       className={cn(
-                        "block duration-150 relative",
+                        "block duration-150 relative py-2 px-1 min-h-[44px] flex items-center justify-center",
                         location.pathname === item.path
                           ? "text-pink-main font-bold"
                           : "text-slate-600 hover:text-pink-main"
@@ -105,7 +105,7 @@ const Navbar = () => {
 
             {/* Desktop Actions & Mobile Menu Content */}
             <div className={cn(
-              "w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border border-pink-light p-6 shadow-2xl shadow-pink-main/10 lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none transition-all duration-300 mt-4 lg:mt-0 bg-white/95",
+              "w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border border-pink-light p-4 sm:p-6 shadow-2xl shadow-pink-main/10 lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none transition-all duration-300 mt-4 lg:mt-0 bg-white/95",
               menuState ? "block mb-6" : "hidden lg:flex"
             )}>
               <div className="lg:hidden">
@@ -115,7 +115,7 @@ const Navbar = () => {
                       <Link
                         to={item.path}
                         className={cn(
-                          "block duration-150",
+                          "block duration-150 py-3 px-4 min-h-[44px] flex items-center justify-center",
                           location.pathname === item.path
                             ? "text-pink-main font-bold"
                             : "text-slate-600 hover:text-pink-main"
@@ -134,7 +134,7 @@ const Navbar = () => {
                   asChild
                   variant="outline"
                   size="sm"
-                  className={cn("w-full sm:w-auto border-pink-light text-pink-main hover:bg-pink-light", isScrolled && 'lg:hidden')}
+                  className={cn("w-full sm:w-auto border-pink-light text-pink-main hover:bg-pink-light min-h-[44px]", isScrolled && 'lg:hidden')}
                 >
                   <Link to="/catalog">
                     <ShoppingBag size={16} className="mr-2" />
@@ -145,7 +145,7 @@ const Navbar = () => {
                 <Button
                   asChild
                   size="sm"
-                  className={cn("w-full sm:w-auto bg-pink-main text-white hover:bg-pink-600", isScrolled && 'lg:hidden')}
+                  className={cn("w-full sm:w-auto bg-pink-main text-white hover:bg-pink-600 min-h-[44px]", isScrolled && 'lg:hidden')}
                 >
                   <a href={getWhatsAppLink('', i18n.language)} target="_blank" rel="noopener noreferrer">
                     <PhoneCall size={16} className="mr-2" />
@@ -156,7 +156,7 @@ const Navbar = () => {
                 <Button
                   asChild
                   size="sm"
-                  className={cn("bg-pink-main text-white hover:bg-pink-600 shadow-md shadow-pink-main/20", isScrolled ? 'lg:inline-flex' : 'hidden')}
+                  className={cn("bg-pink-main text-white hover:bg-pink-600 shadow-md shadow-pink-main/20 min-h-[44px]", isScrolled ? 'lg:inline-flex' : 'hidden')}
                 >
                   <a href={getWhatsAppLink('', i18n.language)} target="_blank" rel="noopener noreferrer">
                     <span>Order</span>

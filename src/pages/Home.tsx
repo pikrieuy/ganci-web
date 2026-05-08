@@ -13,7 +13,9 @@ const Home = () => {
 
   const featuredProducts = products.filter((p) => p.is_featured && p.is_active);
 
-  const orderSteps = t('orderProcess.steps', { returnObjects: true });
+  const orderSteps = Array.isArray(t('orderProcess.steps', { returnObjects: true })) 
+    ? t('orderProcess.steps', { returnObjects: true }) 
+    : [];
   const stepIcons = [MessageCircle, Palette, Package, Truck];
 
   return (
@@ -73,7 +75,7 @@ const Home = () => {
             <p className="subheading-section">{t('featuredProducts.subtitle')}</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid-responsive-4">
             {featuredProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
@@ -112,8 +114,8 @@ const Home = () => {
             <p className="subheading-section">{t('orderProcess.subtitle')}</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {orderSteps.map((step, index) => {
+          <div className="grid-responsive-4">
+            {orderSteps.map((step: any, index: number) => {
               const Icon = stepIcons[index];
               return (
                 <motion.div
@@ -173,7 +175,7 @@ const Home = () => {
 
       {/* ============ TESTIMONIALS SECTION ============ */}
       <section className="bg-pink-light/20 py-20 relative overflow-hidden">
-        <div className="container z-10 mx-auto px-4">
+        <div className="container z-10 mx-auto px-4 max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -211,7 +213,7 @@ const Home = () => {
 
       {/* ============ RATING SECTION ============ */}
       <section className="py-16 bg-white border-b border-pink-light/30">
-        <div className="container mx-auto px-4 flex flex-col items-center gap-6">
+        <div className="container mx-auto px-4 max-w-4xl flex flex-col items-center gap-6">
           <p className="text-sm font-sans font-medium uppercase tracking-[0.2em] text-pink-main/80 text-center">
             How was your experience?
           </p>
