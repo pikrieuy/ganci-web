@@ -105,17 +105,17 @@ const Navbar = () => {
 
             {/* Desktop Actions & Mobile Menu Content */}
             <div className={cn(
-              "w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border border-pink-light p-4 sm:p-6 shadow-2xl shadow-pink-main/10 lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none transition-all duration-300 mt-4 lg:mt-0 bg-white/95",
-              menuState ? "block mb-6" : "hidden lg:flex"
+              "w-full flex-wrap items-center justify-end space-y-4 rounded-2xl border border-pink-light p-3 sm:p-4 shadow-lg shadow-pink-main/10 lg:m-0 lg:flex lg:w-fit lg:gap-4 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none transition-all duration-300 mt-3 lg:mt-0 bg-white/95",
+              menuState ? "block mb-4" : "hidden lg:flex"
             )}>
               <div className="lg:hidden">
-                <ul className="space-y-6 text-lg font-sans font-medium text-center">
+                <ul className="space-y-4 text-base font-sans font-medium text-center">
                   {navLinks.map((item, index) => (
                     <li key={index}>
                       <Link
                         to={item.path}
                         className={cn(
-                          "block duration-150 py-3 px-4 min-h-[44px] flex items-center justify-center",
+                          "block duration-150 py-2 px-3 min-h-[40px] flex items-center justify-center text-sm",
                           location.pathname === item.path
                             ? "text-pink-main font-bold"
                             : "text-slate-600 hover:text-pink-main"
@@ -128,16 +128,16 @@ const Navbar = () => {
                 </ul>
               </div>
 
-              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 lg:w-fit items-center justify-center pt-4 lg:pt-0 border-t border-pink-light lg:border-t-0">
+              <div className="flex w-full flex-col space-y-2 sm:flex-row sm:gap-2 sm:space-y-0 lg:w-fit items-center justify-center pt-3 lg:pt-0 border-t border-pink-light lg:border-t-0">
 
                 <Button
                   asChild
                   variant="outline"
                   size="sm"
-                  className={cn("w-full sm:w-auto border-pink-light text-pink-main hover:bg-pink-light min-h-[44px]", isScrolled && 'lg:hidden')}
+                  className={cn("w-full sm:w-auto border-pink-light text-pink-main hover:bg-pink-light min-h-[40px] text-sm", isScrolled && 'lg:hidden')}
                 >
                   <Link to="/catalog">
-                    <ShoppingBag size={16} className="mr-2" />
+                    <ShoppingBag size={14} className="mr-1" />
                     <span>{t('hero.ctaCatalog')}</span>
                   </Link>
                 </Button>
@@ -145,10 +145,10 @@ const Navbar = () => {
                 <Button
                   asChild
                   size="sm"
-                  className={cn("w-full sm:w-auto bg-pink-main text-white hover:bg-pink-600 min-h-[44px]", isScrolled && 'lg:hidden')}
+                  className={cn("w-full sm:w-auto bg-pink-main text-white hover:bg-pink-600 min-h-[40px] text-sm", isScrolled && 'lg:hidden')}
                 >
                   <a href={getWhatsAppLink('', i18n.language)} target="_blank" rel="noopener noreferrer">
-                    <PhoneCall size={16} className="mr-2" />
+                    <PhoneCall size={14} className="mr-1" />
                     <span>{t('hero.ctaOrder')}</span>
                   </a>
                 </Button>

@@ -75,7 +75,7 @@ const Home = () => {
             <p className="subheading-section">{t('featuredProducts.subtitle')}</p>
           </motion.div>
 
-          <div className="grid-responsive-4">
+          <div className="grid-responsive-4 gap-4 sm:gap-6">
             {featuredProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
