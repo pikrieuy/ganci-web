@@ -166,7 +166,7 @@ const About = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-purple-dark to-purple-accent rounded-2xl p-8 shadow-md flex gap-4 group hover:shadow-xl hover:scale-[1.02] transition-all duration-300 text-white"
+            className="bg-gradient-to-br from-pink-main to-purple-accent rounded-2xl p-8 shadow-md flex gap-4 group hover:shadow-xl hover:scale-[1.02] transition-all duration-300 text-white"
           >
             <div className="bg-white/20 p-3 rounded-full h-fit">
               <InstagramIcon size={28} />

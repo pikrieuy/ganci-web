@@ -173,6 +173,31 @@
     display: block;
   }
 
+  /* Responsive Grid Utilities */
+  .grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: var(--space-md);
+  }
+  
+  .grid-responsive-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: var(--space-md);
+  }
+  
+  .grid-responsive-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: var(--space-md);
+  }
+  
+  .grid-responsive-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+    gap: var(--space-md);
+  }
+
   .section-padding {
     padding: var(--space-xl) var(--space-sm);
   }

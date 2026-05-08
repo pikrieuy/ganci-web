@@ -75,7 +75,7 @@ const Home = () => {
             <p className="subheading-section">{t('featuredProducts.subtitle')}</p>
           </motion.div>
 
-          <div className="grid-responsive-4 gap-4 sm:gap-6">
+          <div className="grid-responsive-3 gap-4 sm:gap-6">
             {featuredProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index} />
             ))}
@@ -174,14 +174,14 @@ const Home = () => {
       </section>
 
       {/* ============ TESTIMONIALS SECTION ============ */}
-      <section className="bg-pink-light/20 py-20 relative overflow-hidden">
-        <div className="container z-10 mx-auto px-4 max-w-7xl">
+      <section className="bg-pink-light/20 py-16 relative overflow-hidden">
+        <div className="w-full px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             viewport={{ once: true }}
-            className="flex flex-col items-center justify-center max-w-[540px] mx-auto"
+            className="flex flex-col items-center justify-center max-w-[540px] mx-auto mb-12"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
               <MessageCircleHeart size={32} className="text-pink-main" />
@@ -192,20 +192,21 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] max-h-[740px] overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-h-[800px] overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]">
             <TestimonialsColumn 
               testimonials={testimonials.slice(0, 3)} 
               duration={15} 
+              className="w-full"
             />
             <TestimonialsColumn 
               testimonials={testimonials.slice(3, 6)} 
-              className="hidden md:block" 
-              duration={19} 
+              duration={18} 
+              className="w-full hidden md:flex"
             />
             <TestimonialsColumn 
               testimonials={testimonials.slice(6, 9)} 
-              className="hidden lg:block" 
-              duration={17} 
+              duration={21} 
+              className="w-full hidden lg:flex"
             />
           </div>
         </div>
