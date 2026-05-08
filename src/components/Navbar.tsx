@@ -109,13 +109,13 @@ const Navbar = () => {
               menuState ? "block mb-4" : "hidden lg:flex"
             )}>
               <div className="lg:hidden">
-                <ul className="grid grid-cols-2 gap-2 text-base font-sans font-medium text-center">
+                <ul className="space-y-4 text-base font-sans font-medium text-center">
                   {navLinks.map((item, index) => (
                     <li key={index}>
                       <Link
                         to={item.path}
                         className={cn(
-                          "block duration-150 py-2 px-2 min-h-[40px] flex items-center justify-center text-sm",
+                          "block duration-150 py-2 px-3 min-h-[40px] flex items-center justify-center text-sm",
                           location.pathname === item.path
                             ? "text-pink-main font-bold"
                             : "text-slate-600 hover:text-pink-main"
