@@ -44,8 +44,8 @@ export default function IntroScreen({ children }) {
                   style={{
                     position: "absolute",
                     inset: 0,
-                    // Transparent background for iPhone compatibility
-                    background: "transparent",
+                    // Bright soft pink gradient
+                    background: "linear-gradient(135deg, #fdf2f8 0%, #fbcfe8 50%, #f9a8d4 100%)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
