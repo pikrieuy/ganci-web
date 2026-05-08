@@ -19,7 +19,7 @@ const ProductCard = ({ product, index = 0 }) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <Link to={`/catalog/${product.id}`} className="block">
-        <div className="card-product group cursor-pointer">
+        <div className="card-product group cursor-pointer mb-4">
           {/* Image Container */}
           <div className="relative overflow-hidden aspect-square">
             <img

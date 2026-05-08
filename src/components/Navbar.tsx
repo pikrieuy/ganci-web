@@ -109,13 +109,13 @@ const Navbar = () => {
               menuState ? "block mb-4" : "hidden lg:flex"
             )}>
               <div className="lg:hidden">
-                <ul className="space-y-4 text-base font-sans font-medium text-center">
+                <ul className="grid grid-cols-2 gap-2 text-base font-sans font-medium text-center">
                   {navLinks.map((item, index) => (
                     <li key={index}>
                       <Link
                         to={item.path}
                         className={cn(
-                          "block duration-150 py-2 px-3 min-h-[40px] flex items-center justify-center text-sm",
+                          "block duration-150 py-2 px-2 min-h-[40px] flex items-center justify-center text-sm",
                           location.pathname === item.path
                             ? "text-pink-main font-bold"
                             : "text-slate-600 hover:text-pink-main"
@@ -132,34 +132,12 @@ const Navbar = () => {
 
                 <Button
                   asChild
-                  variant="outline"
-                  size="sm"
-                  className={cn("w-full sm:w-auto border-pink-light text-pink-main hover:bg-pink-light min-h-[40px] text-sm", isScrolled && 'lg:hidden')}
-                >
-                  <Link to="/catalog">
-                    <ShoppingBag size={14} className="mr-1" />
-                    <span>{t('hero.ctaCatalog')}</span>
-                  </Link>
-                </Button>
-
-                <Button
-                  asChild
                   size="sm"
                   className={cn("w-full sm:w-auto bg-pink-main text-white hover:bg-pink-600 min-h-[40px] text-sm", isScrolled && 'lg:hidden')}
                 >
                   <a href={getWhatsAppLink('', i18n.language)} target="_blank" rel="noopener noreferrer">
                     <PhoneCall size={14} className="mr-1" />
                     <span>{t('hero.ctaOrder')}</span>
-                  </a>
-                </Button>
-
-                <Button
-                  asChild
-                  size="sm"
-                  className={cn("bg-pink-main text-white hover:bg-pink-600 shadow-md shadow-pink-main/20 min-h-[44px]", isScrolled ? 'lg:inline-flex' : 'hidden')}
-                >
-                  <a href={getWhatsAppLink('', i18n.language)} target="_blank" rel="noopener noreferrer">
-                    <span>Order</span>
                   </a>
                 </Button>
               </div>
